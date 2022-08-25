@@ -1,6 +1,8 @@
 input {
 	width: 98%;
 	height: 25px;
+	font-weight: bold;
+	background-color: white;
 }
 
 button {
@@ -33,11 +35,6 @@ button:active {
 #calculadora {
 	width: 400px;
 	margin: auto;
-}
-
-#visor {
-	font-weight: bold;
-	background-color: white;
 }
 
 #digitos {

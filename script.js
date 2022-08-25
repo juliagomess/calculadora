@@ -153,11 +153,13 @@ function resolveExpressao(exp) {
             }
         }        
     }
-
     return exp;
 }
 
 function mostrarExpressao(digito) {
+
+    var tam = expressao.length - 1;
+    var flag = 0;
 
     if(digito === 'c') {
         expressao="";
@@ -167,6 +169,33 @@ function mostrarExpressao(digito) {
         expressao = resolveExpressao(expressao);
         document.getElementById("visor").value = expressao;
     
+    } else if(expressao==="") {
+        if(digito!='+' && digito!='/' && digito!='*' && digito!='.') {
+            expressao = expressao + digito;
+            document.getElementById("visor").value = expressao;
+        }
+        
+    } else if(digito==='-' || digito==='+' || digito==='/' || digito==='*') {
+        if(!(expressao.charAt(tam)==='-' || expressao.charAt(tam)==='+' || expressao.charAt(tam)==='/' || expressao.charAt(tam)==='*' || expressao.charAt(tam)==='.')) {
+            expressao = expressao + digito;
+            document.getElementById("visor").value = expressao;
+        }
+
+    } else if(digito==='.') {
+        if(expressao.charAt(tam)!='.') {
+            for(var i=tam; !checaOperando(expressao.charAt(i)) && i>0; i--) {
+                if(expressao.charAt(i)==='.') {
+                    flag=1;
+                    break;
+                }
+            }
+
+            if(flag===0) {
+                expressao = expressao + digito;
+                document.getElementById("visor").value = expressao;
+            }
+        }
+        
     } else {
         expressao = expressao + digito;
         document.getElementById("visor").value = expressao;
