@@ -9,27 +9,27 @@
 </head>
 <body>
     <div id="calculadora">
-        <input type="text">
+        <input type="text" disabled id="visor">
         <div id="digitos">
-            <button class="btn-7">7</button>
-            <button class="btn-8">8</button>
-            <button class="btn-9">9</button>
-            <button class="btn-div">/</button>
-            <button class="btn-4">4</button>
-            <button class="btn-5">5</button>
-            <button class="btn-6">6</button>
-            <button class="btn-mult">*</button>
-            <button class="btn-1">1</button>
-            <button class="btn-2">2</button>
-            <button class="btn-3">3</button>
-            <button class="btn-menos">-</button>
-            <button class="btn-0">0</button>
-            <button class="btn-ponto">.</button>
-            <button class="btn-mais">+</button>
-            <button class="btn-igual">=</button>
-            <button class="btn-c">C</button>
+            <button class="btn-7" onclick="mostrarExpressao('7')">7</button>
+            <button class="btn-8" onclick="mostrarExpressao('8')">8</button>
+            <button class="btn-9" onclick="mostrarExpressao('9')">9</button>
+            <button class="btn-div" onclick="mostrarExpressao('/')">/</button>
+            <button class="btn-4" onclick="mostrarExpressao('4')">4</button>
+            <button class="btn-5" onclick="mostrarExpressao('5')">5</button>
+            <button class="btn-6" onclick="mostrarExpressao('6')">6</button>
+            <button class="btn-mult" onclick="mostrarExpressao('*')">*</button>
+            <button class="btn-1" onclick="mostrarExpressao('1')">1</button>
+            <button class="btn-2" onclick="mostrarExpressao('2')">2</button>
+            <button class="btn-3" onclick="mostrarExpressao('3')">3</button>
+            <button class="btn-menos" onclick="mostrarExpressao('-')">-</button>
+            <button class="btn-0" onclick="mostrarExpressao('0')">0</button>
+            <button class="btn-ponto" onclick="mostrarExpressao('.')">.</button>
+            <button class="btn-mais" onclick="mostrarExpressao('+')">+</button>
+            <button class="btn-igual" onclick="mostrarExpressao('=')">=</button>
+            <button class="btn-c" onclick="mostrarExpressao('c')">C</button>
         </div>
     </div>
-    <script src="./script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

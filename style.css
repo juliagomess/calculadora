@@ -32,8 +32,12 @@ button:active {
 
 #calculadora {
 	width: 400px;
-	height: 400px;
 	margin: auto;
+}
+
+#visor {
+	font-weight: bold;
+	background-color: white;
 }
 
 #digitos {
