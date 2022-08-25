@@ -26,7 +26,7 @@ function procuraOperando(exp) {
         if(exp.charAt(i) === '*')
             return true;
         if(exp.charAt(i) === '-')
-            flag=1;
+            flag++;
         if(exp.charAt(i) === '+')
             return true;
     }
@@ -34,9 +34,8 @@ function procuraOperando(exp) {
     if(flag===1 && exp.charAt(0)==='-') 
         return false;
         
-    if(flag===1)
+    if(flag>0)
         return true;
-    
 
     return false;
 }
@@ -134,11 +133,18 @@ function resolveExpressao(exp) {
                         for(var j=i-1; !checaOperando(exp.charAt(j)) && j>=0; j--) {
                             n1=n1+exp.charAt(j);
                         }
+                        if(flagneg===1) 
+                            n1 = n1 + '-';
+
                         n1 = inverteNum(n1);
                         for(var j=i+1; !checaOperando(exp.charAt(j)) && j<exp.length; j++) {
                             n2=n2+exp.charAt(j);
                         }
                         aux = n1 + '-' + n2;
+                        if(flagneg===1) {
+                            aux = aux.substring(1);
+                            flagneg=0;
+                        }
                         naux = parseFloat(n1) - parseFloat(n2);
                         flag = 1;
                         break;
