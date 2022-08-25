@@ -1,53 +1,121 @@
 input {
-    width: 98%;
-    height: 50px;
+	width: 98%;
+	height: 25px;
 }
 
 button {
-	box-shadow:inset 0px 1px 0px 0px #bee2f9;
-	background:linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%);
-	background-color:#63b8ee;
-	border-radius:6px;
-	border:1px solid #3866a3;
-	display:inline-block;
-	cursor:pointer;
-	color:#14396a;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #7cacde;
+	box-shadow: inset 0px 1px 0px 0px #bee2f9;
+	background: linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%);
+	background-color: #63b8ee;
+	border-radius: 6px;
+	border: 1px solid #3866a3;
+	display: inline-block;
+	cursor: pointer;
+	color: #14396a;
+	font-family: Arial;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 6px 24px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #7cacde;
 }
+
 button:hover {
-	background:linear-gradient(to bottom, #468ccf 5%, #63b8ee 100%);
-	background-color:#468ccf;
+	background: linear-gradient(to bottom, #468ccf 5%, #63b8ee 100%);
+	background-color: #468ccf;
 }
+
 button:active {
-	position:relative;
-	top:1px;
+	position: relative;
+	top: 1px;
 }
 
 #calculadora {
-    width: 400px;
-    height: 400px;
-    margin: auto;
-    border: 1px solid red;
+	width: 400px;
+	height: 400px;
+	margin: auto;
 }
 
 #digitos {
 	display: grid;
-	grid: repeat(2,60px) / auto-flow 80px;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-areas:
+		"btn-c btn-div btn-mult btn-menos"
+		"btn-7 btn-8 btn-9 btn-mais"
+		"btn-4 btn-5 btn-6 btn-mais"
+		"btn-1 btn-2 btn-3 btn-igual"
+		"btn-0 btn-0 btn-ponto btn-igual"
+	;
 }
 
-.numero {
-    width: 50px;
-    height: 50px;
+.btn-c {
+	grid-area: btn-c;
 }
 
-.operador {
-    width: 50px;
-    height: 50px;
+.btn-div {
+	grid-area: btn-div;
 }
 
+.btn-mult {
+	grid-area: btn-mult;
+}
 
+.btn-menos {
+	grid-area: btn-menos;
+}
+
+.btn-7 {
+	grid-area: btn-7;
+}
+
+.btn-8 {
+	grid-area: btn-8;
+}
+
+.btn-9 {
+	grid-area: btn-9;
+}
+
+.btn-mais {
+	grid-area: btn-mais;
+}
+
+.btn-4 {
+	grid-area: btn-4;
+}
+
+.btn-5 {
+	grid-area: btn-5;
+}
+
+.btn-6 {
+	grid-area: btn-6;
+}
+
+.btn-mais {
+	grid-area: btn-mais;
+}
+
+.btn-1 {
+	grid-area: btn-1;
+}
+
+.btn-2 {
+	grid-area: btn-2;
+}
+
+.btn-3 {
+	grid-area: btn-3;
+}
+
+.btn-igual {
+	grid-area: btn-igual;
+}
+
+.btn-0 {
+	grid-area: btn-0;
+}
+
+.btn-ponto {
+	grid-area: btn-ponto;
+}
