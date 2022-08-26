@@ -176,7 +176,7 @@ function mostrarExpressao(digito) {
         document.getElementById("visor").value = expressao;
     
     } else if(expressao==="") {
-        if(digito!='+' && digito!='/' && digito!='*' && digito!='.') {
+        if(digito!='+' && digito!='/' && digito!='*') {
             expressao = expressao + digito;
             document.getElementById("visor").value = expressao;
         }
